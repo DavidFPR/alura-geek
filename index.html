@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura Geek | Inicio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/pixel-heart.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <div class="header__title">
+        <img
+          class="header__title-logo"
+          src="assets/pixel-heart.png"
+          alt="Pixel Heart"
+        />
+        <img
+          class="header__title-logo"
+          src="assets/pixel-heart.png"
+          alt="Pixel Heart"
+        />
+        <img
+          class="header__title-logo"
+          src="assets/pixel-heart.png"
+          alt="Pixel Heart"
+        />
+        <h1 class="header__title-text">AluraGeek</h1>
+        <div class="header__theme-switch">
+          <button class="header__dark-mode" id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main__container">
+      <section class="form">
+        <h2 class="form__heading">AGREGAR PRODUCTO:</h2>
+        <form>
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="nombre..."
+            required
+          />
+          <br />
+          <label for="precio">Precio:</label>
+          <input
+            type="text"
+            id="precio"
+            name="precio"
+            placeholder="precio..."
+            required
+          />
+          <br />
+          <label for="imagen">Imagen:</label>
+          <input
+            type="text"
+            id="imagen"
+            name="imagen"
+            placeholder="imagen..."
+            required
+          />
+          <br />
+          <div class="form__buttons">
+            <button class="form__button form__button--submit" type="submit">Enviar</button>
+            <button class="form__button form__button--reset" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="products">
+        <h2 class="products__heading">MIS PRODUCTOS:</h2>
+        <div class="products__list">
+          <div class="product-card">
+        <img class="product-card__image" src="assets/gbpurp.png" alt="GameBoy Color" />
+        <h3 class="product-card__title">GameBoy Color</h3>
+        <p class="product-card__price">$79.95</p>
+          </div>
+          <div class="product-card">
+        <img class="product-card__image" src="assets/js-duck.jpg" alt="JS DevDuck" />
+        <h3 class="product-card__title">JS DevDuck</h3>
+        <p class="product-card__price">$14.99</p>
+          </div>
+          <div class="product-card">
+        <img class="product-card__image" src="assets/gbpurp.png" alt="GameBoy Color" />
+        <h3 class="product-card__title">GameBoy Color</h3>
+        <p class="product-card__price">$79.95</p>
+          </div>
+          <div class="product-card">
+        <img class="product-card__image" src="assets/js-duck.jpg" alt="JS DevDuck" />
+        <h3 class="product-card__title">JS DevDuck</h3>
+        <p class="product-card__price">$14.99</p>
+          </div>
+          <div class="product-card">
+        <img class="product-card__image" src="assets/gbpurp.png" alt="GameBoy Color" />
+        <h3 class="product-card__title">GameBoy Color</h3>
+        <p class="product-card__price">$79.95</p>
+          </div>
+          <div class="product-card">
+        <img class="product-card__image" src="assets/js-duck.jpg" alt="JS DevDuck" />
+        <h3 class="product-card__title">JS DevDuck</h3>
+        <p class="product-card__price">$14.99</p>
+          </div>
+          <div class="product-card">
+        <img class="product-card__image" src="assets/gbpurp.png" alt="GameBoy Color" />
+        <h3 class="product-card__title">GameBoy Color</h3>
+        <p class="product-card__price">$79.95</p>
+          </div>
+          <div class="product-card">
+        <img class="product-card__image" src="assets/js-duck.jpg" alt="JS DevDuck" />
+        <h3 class="product-card__title">JS DevDuck</h3>
+        <p class="product-card__price">$14.99</p>
+          </div>
+          <div class="product-card">
+        <img class="product-card__image" src="assets/gbpurp.png" alt="GameBoy Color" />
+        <h3 class="product-card__title">GameBoy Color</h3>
+        <p class="product-card__price">$79.95</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/63b63f7197.js" crossorigin="anonymous"></script>
+  </body>
+</html>

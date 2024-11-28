@@ -1,0 +1,404 @@
+/* === Fonts === */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&family=VT323&display=swap');
+
+
+/* === CSS Reset === */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+required dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+/* === Variables === */
+:root {
+  /* === Shared Branding Colors === */
+  --logo-green: #00FF7F;
+  /* Vibrant Lime Green for the logo */
+
+  /* === Dark Mode Colors === */
+  --background-dark: #1A1A1A;
+  /* Dark Charcoal */
+  --primary-accent-dark: #FFCC00;
+  /* Retro Gold */
+  --secondary-accent-dark: #00FFFF;
+  /* Cyan Blue */
+  --highlight-dark: #FF0066;
+  /* Hot Pink */
+  --neutral-dark: #CCCCCC;
+  /* Light Gray */
+  --text-dark: #FFFFFF;
+  /* Bright White */
+  --banner: #333333;
+  /* Deep Gray */
+
+  /* === Light Mode Colors === */
+  --background-light: #F5F5F5;
+  /* Soft Light Gray */
+  --primary-accent-light: #FF5733;
+  /* Orange-Red */
+  --secondary-accent-light: #1FFD7F;
+  /* Bright Green */
+  --highlight-light: #3498DB;
+  /* Sky Blue */
+  --text-light: #2C3E50;
+  /* Dark Navy */
+  --muted-text-light: #95A5A6;
+  /* Muted Gray */
+
+  /* === Fonts === */
+  --font-family-headings: 'Press Start 2P', serif;
+  --font-family-body: 'VT323', monospace;
+  --font-family-alt: 'IBM Plex Mono', monospace;
+
+}
+
+
+/* === Global Styles === */
+
+body {
+  background-color: var(--background-light);
+  height: auto;
+  width: 100vw;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 1rem 0 1rem 0;
+  text-align: center;
+  margin: .5rem;
+  font-family: var(--font-family-headings);
+}
+
+/* === Header === */
+
+.header__title {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  background-color: var(--banner);
+}
+
+.header__title-logo {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+h1 {
+  font-family: var(--font-family-headings);
+  font-size: 1.5rem;
+  color: var(--background-light);
+  text-align: center;
+}
+
+.header__dark-mode {
+  background: none;
+  /* Removes default button styling */
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: white;
+  /* Makes the icon white */
+  transition: color 0.3s;
+}
+
+.header__dark-mode:hover {
+  color: var(--secondary-accent-light);
+}
+
+/* === Main === */
+
+#main__container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Product Section === */
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+  box-sizing: border-box;
+  width: calc(50% - 0.5rem);
+  height: 25vh;
+  background-color: var(--logo-green);
+  border: 3px solid var(--banner);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: var(--font-family-alt);
+  font-size: .9rem;
+  transition: all 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-accent-light);
+  cursor: pointer;
+}
+
+.product-card__image {
+  width: 90%;
+  height: 60%;
+  margin-top: 5%;
+  background-color: var(--background-light);
+  border-bottom: 3px solid var(--banner);
+  border-radius: 5px;
+}
+
+.product-card__title,
+.product-card__price {
+  margin: 0 0 .5rem .5rem;
+  align-self: flex-start;
+}
+
+/* === Form Section === */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+form {
+  margin: 1rem;
+  width: 100%;
+  /* Ensure form takes full width */
+  max-width: 400px;
+  /* Optional: Set a max-width for better layout */
+}
+
+label {
+  font-size: 1.2rem;
+  margin: .5rem 0 .5rem 0;
+  font-family: var(--font-family-alt);
+  width: 100%;
+  /* Ensure label takes full width */
+}
+
+input {
+  margin: .5rem 0 .5rem 0;
+  width: 100%;
+  /* Ensure input takes full width */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width and height */
+  border-radius: 5px;
+  height: 2rem;
+  padding: .5rem;
+  border: none;
+}
+
+input::placeholder {
+  font-family: var(--font-family-alt);
+  font-size: .9rem;
+}
+
+input:focus {
+  border: 1px solid var(--primary-accent-light);
+  outline: none;
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: space-between;
+  /* Distribute buttons evenly */
+  width: 100%;
+  /* Ensure button container takes full width */
+}
+
+.form__button--submit,
+.form__button--reset {
+  margin: 1rem 0;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-family: var(--font-family-alt);
+  border-radius: 5px;
+  width: 48%;
+  /* Set width to align with form elements */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width and height */
+}
+
+.form__button--submit {
+  background-color: var(--primary-accent-light);
+  color: var(--background-light);
+  border: none;
+}
+
+.form__button--submit:hover {
+  background-color: var(--secondary-accent-light);
+  cursor: pointer;
+}
+
+.form__button--reset {
+  background-color: transparent;
+  color: var(--primary-accent-light);
+  border: 2px solid var(--primary-accent-light);
+}
+
+.form__button--reset:hover {
+  background-color: var(--primary-accent-light);
+  color: var(--background-light);
+  cursor: pointer;
+}
