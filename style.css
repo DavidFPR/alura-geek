@@ -229,13 +229,14 @@ h1 {
 
 .header__dark-mode {
   background: none;
-  /* Removes default button styling */
   border: none;
   cursor: pointer;
-  font-size: 1.5em;
   color: white;
-  /* Makes the icon white */
+  font-size: 1rem;
   transition: color 0.3s;
+
+  position: relative;
+  left: 1.2rem;
 }
 
 .header__dark-mode:hover {
@@ -338,7 +339,7 @@ label {
 }
 
 input {
-  margin: .5rem 0 .5rem 0;
+  margin: .8rem 0 1.2rem 0;
   width: 100%;
   /* Ensure input takes full width */
   box-sizing: border-box;
@@ -401,4 +402,39 @@ input:focus {
   background-color: var(--primary-accent-light);
   color: var(--background-light);
   cursor: pointer;
+}
+
+/* === Footer === */
+
+.footer__banner {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  background-color: var(--banner);
+}
+
+.footer__banner-title {
+  display: flex;
+  gap: .8rem;
+
+}
+
+.footer__banner-logo {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+footer p {
+  font-family: var(--font-family-alt);
+  font-size: 1rem;
+  color: var(--background-light);
+}
+
+footer h4 {
+  font-family: var(--font-family-headings);
+  font-size: .5rem;
+  color: #b3b3b3
 }
