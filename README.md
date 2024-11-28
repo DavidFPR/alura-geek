@@ -74,7 +74,7 @@ Una vez que el proyecto esté en ejecución localmente, puedes:
 
 ## Licencia
 
-Este proyecto es para fines educativos como parte del curso **Alura | ONE** y está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto es exclusivamente para fines educativos como parte del curso **Alura | ONE**.
 
 ## Contacto
 
