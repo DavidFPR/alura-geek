@@ -260,9 +260,24 @@ body.dark-mode {
   justify-content: center;
 }
 
-.header__dark-mode:hover {
-  color: var(--secondary-accent-light);
+.moon-color {
+  color: #FFFFFF;
+  transition: color 0.3s;
 }
+
+.moon-color:hover {
+  color: var(--geek-green);
+}
+
+.sun-color {
+  color: var(--geek-green);
+  transition: color 0.3s;
+}
+
+.sun-color:hover {
+  color: #FFFFFF;
+}
+
 
 body.dark-mode .product-card {
   background-color: var(--card-dark);
@@ -276,6 +291,14 @@ body.dark-mode .product-card:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
+
+body.dark-mode .fa-trash-can{
+  color: var(--text-dark);
+} 
+
+body.dark-mode .fa-trash-can:hover {
+  color: var(--geek-green);
+} 
 
 body.dark-mode * {
   scrollbar-width: thin;
@@ -323,6 +346,7 @@ body.dark-mode *::-webkit-scrollbar-track {
 }
 
 .product-card {
+  position: relative;
   box-sizing: border-box;
   width: calc(50% - 0.5rem);
   background-color: var(--geek-green);
@@ -357,6 +381,21 @@ body.dark-mode *::-webkit-scrollbar-track {
 .product-card__price {
   margin: .2rem 0 .5rem .5rem;
   align-self: flex-start;
+}
+
+.fa-trash-can {
+  color: var(--text-light);
+  font-size: .7rem;
+  margin: .5rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+}
+
+.fa-trash-can:hover {
+  color: var(--geek-green);
+
 }
 
 /* === Form Section === */

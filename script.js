@@ -11,14 +11,12 @@ darkMode.addEventListener('click', () => {
 // Function to change the icon and its color
 function updateIcon() {
   if (body.classList.contains('dark-mode')) {
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
-    icon.style.color = '#00FF7F'; // Set color for .fa-sun
+    icon.classList.remove('fa-moon', 'moon-color');
+    icon.classList.add('fa-sun', 'sun-color');
     icon.setAttribute('title', 'Modo claro');
   } else {
-    icon.classList.remove('fa-sun');
-    icon.classList.add('fa-moon');
-    icon.style.color = '#ffffff'; // Set color for .fa-moon
+    icon.classList.remove('fa-sun', 'sun-color');
+    icon.classList.add('fa-moon', 'moon-color');
     icon.setAttribute('title', 'Modo oscuro');
   }
 }
