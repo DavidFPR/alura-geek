@@ -246,6 +246,7 @@ body.dark-mode {
 }
 
 .header__dark-mode {
+  
   width: 1.5rem;
   background: none;
   border: none;
@@ -253,8 +254,8 @@ body.dark-mode {
   color: #FFFFFF;
   font-size: 1rem;
   transition: color 0.3s;
-  position: relative;
-  left: 1.2rem;
+  position: absolute;
+  right: 5%;
 
   display: flex;
   justify-content: center;
@@ -292,13 +293,13 @@ body.dark-mode .product-card:hover {
   cursor: pointer;
 }
 
-body.dark-mode .fa-trash-can{
+body.dark-mode .fa-trash-can {
   color: var(--text-dark);
-} 
+}
 
 body.dark-mode .fa-trash-can:hover {
   color: var(--geek-green);
-} 
+}
 
 body.dark-mode * {
   scrollbar-width: thin;
@@ -496,13 +497,14 @@ input:focus {
 /* === Footer === */
 
 .footer__banner {
-  height: 20vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3vh;
+  gap: 2.5vh;
   background-color: var(--banner);
+  padding: 2rem;
 }
 
 .footer__banner-title {
@@ -541,27 +543,28 @@ footer h4 {
 
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 5vh 0 5vh 0;
   }
 
   #main__container {
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .header__title {
+    width: auto;
     height: 15vh;
     position: static;
+    padding: 0 5% 0 5%;
   }
 
   .header__dark-mode {
-    position: relative;
-    left: 25vw;
+    font-size: 1.5rem;
   }
 
   .form {
@@ -582,20 +585,24 @@ footer h4 {
     width: calc(33.3% - 1rem);
   }
 
-  footer p {
-    font-size: .5rem;
+  .footer__banner {
+    padding: 1.5rem;
   }
 
-  footer h2 {
+  footer p {
     font-size: 1rem;
   }
 
+  footer h2 {
+    font-size: 1.2rem;
+  }
+
   footer h4 {
-    font-size: .3rem;
+    font-size: .6rem;
   }
 
   .footer__banner-logo {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
