@@ -585,6 +585,10 @@ footer h4 {
     width: calc(33.3% - 1rem);
   }
 
+  .fa-trash-can {
+    font-size: 1.2rem;
+  }
+
   .footer__banner {
     padding: 1.5rem;
   }
