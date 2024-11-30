@@ -152,11 +152,16 @@ table {
 
 
   /* === Updated Dark Mode Colors === */
-  --background-dark: #1A1A1A; /* Deep neutral gray for background */
-  --card-dark: #2B2B2B; /* Slightly lighter gray for cards */
-  --card-hover-dark: #3C3C3C; /* Medium gray for hover effect */
-  --text-dark: #E0E0E0; /* Soft gray-white for readability */
-  --border-dark: #444444; /* Subtle gray border */
+  --background-dark: #1A1A1A;
+  /* Deep neutral gray for background */
+  --card-dark: #2B2B2B;
+  /* Slightly lighter gray for cards */
+  --card-hover-dark: #3C3C3C;
+  /* Medium gray for hover effect */
+  --text-dark: #E0E0E0;
+  /* Soft gray-white for readability */
+  --border-dark: #444444;
+  /* Subtle gray border */
 
   /* === Light Mode Colors === */
   --background-light: #F5F5F5;
@@ -171,6 +176,22 @@ table {
 
 }
 
+/* === Srollbar Styles === */
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+}
+
+/* For Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 3px solid var(--background-dark);
+}
 
 /* === Global Styles === */
 
@@ -200,9 +221,9 @@ h2 {
 /* === Header === */
 
 .header__title {
+  width: 100%;
   position: fixed;
-  top:0;
-  width: 100vw;
+  top: 0;
   height: 10vh;
   display: flex;
   align-items: center;
@@ -225,16 +246,18 @@ body.dark-mode {
 }
 
 .header__dark-mode {
-  width: 3rem;
+  width: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
   color: #FFFFFF;
   font-size: 1rem;
   transition: color 0.3s;
-
   position: relative;
   left: 1.2rem;
+
+  display: flex;
+  justify-content: center;
 }
 
 .header__dark-mode:hover {
@@ -242,16 +265,30 @@ body.dark-mode {
 }
 
 body.dark-mode .product-card {
-  background-color: var(--card-dark); /* Dark card background */
-  border: 3px solid var(--border-dark); /* Subtle border */
-  color: var(--text-dark); /* Off-white text */
+  background-color: var(--card-dark);
+  border: 3px solid var(--border-dark);
+  color: var(--text-dark);
 }
 
 body.dark-mode .product-card:hover {
-  background-color: var(--card-hover-dark); /* Slightly lighter on hover */
-  transform: scale(1.05); /* Keep hover animation */
-  border-color: var(--geek-green); /* Highlight border on hover */
+  background-color: var(--card-hover-dark);
+  border-color: var(--geek-green);
+  transform: scale(1.05);
   cursor: pointer;
+}
+
+body.dark-mode * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--geek-green) var(--background-dark);
+}
+
+/* For Chrome, Edge, and Safari - Dark Mode */
+body.dark-mode *::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.dark-mode *::-webkit-scrollbar-track {
+  background: var(--background-dark);
 }
 
 
@@ -288,7 +325,6 @@ body.dark-mode .product-card:hover {
 .product-card {
   box-sizing: border-box;
   width: calc(50% - 0.5rem);
-  height: 25vh;
   background-color: var(--geek-green);
   border: 3px solid var(--banner);
   border-radius: 5px;
@@ -319,7 +355,7 @@ body.dark-mode .product-card:hover {
 
 .product-card__title,
 .product-card__price {
-  margin: 0 0 .5rem .5rem;
+  margin: .2rem 0 .5rem .5rem;
   align-self: flex-start;
 }
 
@@ -437,14 +473,21 @@ input:focus {
 }
 
 .footer__banner-logo {
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 footer p {
   font-family: var(--font-family-alt);
-  font-size: 1rem;
+  font-size: .8rem;
   color: var(--background-light);
+}
+
+footer h2 {
+  font-family: var(--font-family-headings);
+  font-size: 1.2rem;
+  color: var(--background-light);
+  margin: 0;
 }
 
 footer h4 {
@@ -457,6 +500,10 @@ footer h4 {
 
 @media (min-width: 768px) {
 
+
+  h1 {
+    font-size: 1.5rem;
+  }
 
   h2 {
     font-size: 1rem;
@@ -473,10 +520,6 @@ footer h4 {
     position: static;
   }
 
-  h1 {
-    font-size: 1.2rem;
-  }
-
   .header__dark-mode {
     position: relative;
     left: 25vw;
@@ -484,14 +527,36 @@ footer h4 {
 
   .form {
     margin-top: 0;
-    padding-top: 5%;
+    padding: 5%;
   }
 
   .products {
-    padding-top: 5%;
+    padding: 5%;
   }
 
   .products__list {
     max-height: 70vh;
+    justify-content: space-between;
+  }
+
+  .product-card {
+    width: calc(33.3% - 1rem);
+  }
+
+  footer p {
+    font-size: .5rem;
+  }
+
+  footer h2 {
+    font-size: 1rem;
+  }
+
+  footer h4 {
+    font-size: .3rem;
+  }
+
+  .footer__banner-logo {
+    width: 1rem;
+    height: 1rem;
   }
 }
