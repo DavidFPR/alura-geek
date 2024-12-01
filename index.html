@@ -39,11 +39,11 @@
     <main id="main__container">
       <section class="form">
         <h2 class="form__heading">AGREGAR PRODUCTO:</h2>
-        <form>
+        <form id="product-form">
           <label for="nombre">Nombre:</label>
           <input
             type="text"
-            id="nombre"
+            id="product-name"
             name="nombre"
             placeholder="nombre..."
             required
@@ -52,7 +52,7 @@
           <label for="precio">Precio:</label>
           <input
             type="text"
-            id="precio"
+            id="product-price"
             name="precio"
             placeholder="precio..."
             required
@@ -61,7 +61,7 @@
           <label for="imagen">Imagen:</label>
           <input
             type="text"
-            id="imagen"
+            id="product-image"
             name="imagen"
             placeholder="imagen..."
             required
@@ -80,40 +80,9 @@
 
       <section class="products">
         <h2 class="products__heading">MIS PRODUCTOS:</h2>
-        <div class="products__list">
-          <div class="product-card">
-            <img
-              class="product-card__image"
-              src="assets/gbpurp.png"
-              alt="GameBoy Color"
-            />
-            <h3 class="product-card__title">GameBoy Color</h3>
-            <p class="product-card__price">$79.95</p>
-            <i class="fa-solid fa-trash-can" title="Eliminar"></i>
-          </div>
-
-          <div class="product-card">
-            <img
-              class="product-card__image"
-              src="assets/js-duck.jpg"
-              alt="JS DevDuck"
-            />
-            <h3 class="product-card__title">JS DevDuck</h3>
-            <p class="product-card__price">$14.99</p>
-            <i class="fa-solid fa-trash-can" title="Eliminar"></i>
-          </div>
-
-          <div class="product-card">
-            <img
-              class="product-card__image"
-              src="assets/gbpurp.png"
-              alt="GameBoy Color"
-            />
-            <h3 class="product-card__title">GameBoy Color</h3>
-            <p class="product-card__price">$79.95</p>
-            <i class="fa-solid fa-trash-can" title="Eliminar"></i>
-          </div>
-        </div>
+        <ul class="products__list">
+          <h2 class="products__list--empty">¡No se han agregado productos!</h2>
+        </ul>
       </section>
     </main>
 
@@ -146,6 +115,6 @@
       src="https://kit.fontawesome.com/63b63f7197.js"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>
