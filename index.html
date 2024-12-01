@@ -45,8 +45,9 @@
             type="text"
             id="product-name"
             name="nombre"
-            placeholder="nombre..."
+            placeholder="nombre del producto..."
             required
+            maxlength="50"
           />
           <br />
           <label for="precio">Precio:</label>
@@ -54,8 +55,10 @@
             type="text"
             id="product-price"
             name="precio"
-            placeholder="precio..."
+            placeholder="precio del producto..."
             required
+            maxlength="6"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6)"
           />
           <br />
           <label for="imagen">Imagen:</label>
@@ -63,7 +66,7 @@
             type="text"
             id="product-image"
             name="imagen"
-            placeholder="imagen..."
+            placeholder="url de la imagen o seleccionar..."
             required
           />
           <br />
