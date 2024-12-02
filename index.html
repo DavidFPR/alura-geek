@@ -47,7 +47,7 @@
             name="nombre"
             placeholder="nombre del producto..."
             required
-            maxlength="50"
+            maxlength="30"
           />
           <br />
           <label for="precio">Precio:</label>
@@ -71,7 +71,7 @@
           />
           <br />
           <div class="form__buttons">
-            <button class="form__button form__button--submit" type="submit">
+            <button class="form__button form__button--submit" type="submit" onclick="ClearFormInputs();">
               Enviar
             </button>
             <button class="form__button form__button--reset" type="reset">
@@ -84,7 +84,6 @@
       <section class="products">
         <h2 class="products__heading">MIS PRODUCTOS:</h2>
         <ul class="products__list">
-          <h2 class="products__list--empty">¡No se han agregado productos!</h2>
         </ul>
       </section>
     </main>
@@ -121,3 +120,7 @@
     <script src="./js/main.js" type="module"></script>
   </body>
 </html>
+
+<!-- TO DO -->
+
+ <!-- Add option to upload user files -->
