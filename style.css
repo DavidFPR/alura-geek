@@ -458,7 +458,7 @@ input {
 
 input::placeholder {
   font-family: var(--font-family-alt);
-  font-size: 80%;
+  font-size: .9rem;
 }
 
 input:focus {
@@ -678,4 +678,10 @@ footer h4 {
     font-size: 5vw;
   }
   
+}
+
+@media screen and (min-width: 768px) and (max-height: 600px) and (orientation: landscape) {
+  input::placeholder {
+    font-size: 80%;
+  }
 }
