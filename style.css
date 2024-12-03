@@ -458,7 +458,7 @@ input {
 
 input::placeholder {
   font-family: var(--font-family-alt);
-  font-size: .9rem;
+  font-size: 80%;
 }
 
 input:focus {
@@ -624,6 +624,10 @@ footer h4 {
   .form {
     margin-top: 0;
     padding: 5%;
+  }
+
+  input::placeholder {
+    font-size: .9rem;
   }
 
   .products {
