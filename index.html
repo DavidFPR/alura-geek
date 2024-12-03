@@ -58,23 +58,32 @@
             placeholder="precio del producto..."
             required
             maxlength="6"
-            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6)"
+            oninput="this.value = this.value.replace(/[^0-9.,]/g, '').slice(0, 6)"
           />
           <br />
           <label for="imagen">Imagen:</label>
-          <input
-            type="text"
-            id="product-image"
-            name="imagen"
-            placeholder="url de la imagen o seleccionar..."
-            required
-          />
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="product-image"
+              name="imagen"
+              placeholder="URL de la imagen o seleccionar..."
+              required
+            />
+            <i class="fa-solid fa-folder file-icon" id="file-picker-icon"></i>
+            <input
+              type="file"
+              id="file-picker"
+              accept="image/*"
+              style="display: none;"
+            />
+          </div>
           <br />
           <div class="form__buttons">
             <button class="form__button form__button--submit" type="submit" onclick="ClearFormInputs();">
               Enviar
             </button>
-            <button class="form__button form__button--reset" type="reset">
+            <button class="form__button form__button--reset" type="reset" id="reset-button">
               Limpiar
             </button>
           </div>

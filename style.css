@@ -452,6 +452,8 @@ input {
   height: 2rem;
   padding: .5rem;
   border: none;
+  font-family: var(--font-family-alt);
+  color: var(--text-light);
 }
 
 input::placeholder {
@@ -518,6 +520,27 @@ input[type="number"] {
   background-color: var (--primary-accent-light);
   color: var(--background-light);
   cursor: pointer;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+}
+
+#file-picker-icon {
+  position: absolute;;
+  top: 33%;
+  left: 92%;
+  cursor: pointer;
+  color: var(--text-light)
+}
+
+#file-picker-icon:hover {
+  color: var(--primary-accent-light);
+}
+
+#file-picker-icon.hidden {
+  display: none;
 }
 
 /* === Footer === */
@@ -610,7 +633,7 @@ footer h4 {
   .products__list {
     max-width: 50vw;
     min-width: 50vw;
-    min-height: 40vh;
+    min-height: 45vh;
     max-height: 70vh;
     justify-content: flex-start;
   }
@@ -652,5 +675,3 @@ footer h4 {
   }
   
 }
-
-  

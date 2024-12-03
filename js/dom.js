@@ -18,10 +18,11 @@ export function addProduct(product, container) {
   container.appendChild(productCard);
 }
 
+// Capitalize product name input
 document.getElementById('product-name').addEventListener('input', function (e) {
   let words = e.target.value.split(' ');
   for (let i = 0; i < words.length; i++) {
-    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
   }
   e.target.value = words.join(' ');
 });

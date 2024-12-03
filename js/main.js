@@ -43,6 +43,46 @@ import { addProduct } from './dom.js';
 
 const productContainer = document.querySelector('.products__list');
 const productForm = document.querySelector('#product-form');
+const filePickerIcon = document.querySelector('#file-picker-icon');
+const filePicker = document.querySelector('#file-picker');
+const productImageInput = document.querySelector('#product-image');
+const resetButton = document.querySelector('#reset-button'); // Select the reset button
+
+let imageDataUrl = ''; // Variable to store the data URL
+
+// Open file picker dialog on icon click
+filePickerIcon.addEventListener('click', () => {
+  filePicker.click();
+});
+
+// Update input value with filename and hide icon when a file is selected
+filePicker.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      imageDataUrl = e.target.result; // Store the data URL
+      productImageInput.value = file.name; // Set the input value to the filename
+      filePickerIcon.classList.add('hidden');
+    };
+    reader.readAsDataURL(file); // Read the file as a data URL
+  }
+});
+
+// Hide icon when input has text
+productImageInput.addEventListener('input', () => {
+  if (productImageInput.value) {
+    filePickerIcon.classList.add('hidden');
+  } else {
+    filePickerIcon.classList.remove('hidden');
+  }
+});
+
+// Show icon when the form is reset
+resetButton.addEventListener('click', () => {
+  filePickerIcon.classList.remove('hidden');
+  imageDataUrl = ''; // Clear the stored data URL
+});
 
 document.addEventListener('DOMContentLoaded', async () => {
   const products = await fetchProducts();
@@ -60,7 +100,7 @@ productForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const newProduct = {
     name: document.querySelector('#product-name').value,
-    image: document.querySelector('#product-image').value,
+    image: imageDataUrl || productImageInput.value, // Use the stored data URL or the input value
     price: document.querySelector('#product-price').value,
   };
   const formInputs = document.querySelectorAll('#product-form input');
@@ -73,6 +113,8 @@ productForm.addEventListener('submit', async (event) => {
     addProduct(newProduct, productContainer);
   } finally {
     formInputs.forEach((input) => (input.value = ''));
+    filePickerIcon.classList.remove('hidden');
+    imageDataUrl = ''; // Clear the stored data URL
 
     // Remove empty message if there are products
     const noProductsMessage = document.querySelector('.products__list--empty');
